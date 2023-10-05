@@ -13,7 +13,7 @@
                                 <span class="text-h6">Welcome to Chat</span>
                             </div>
                             <v-text-field @keyup.enter.native="access"  :rules="[required]" focused v-model="username" variant="outlined" label="Name" placeholder="Enter your name"></v-text-field>
-                            <v-btn @keyup.enter.native="access" @click="access" block size="large" color="primary" class="mt-2">
+                            <v-btn @click="access" block size="large" color="primary" class="mt-2">
                                 Enter
                             </v-btn>
                         </v-card-text>
@@ -50,9 +50,9 @@
             const response = await API.post('/api/username', {username:username.value});
             if( ! response.data.success ) throw new Error("Error from api");
             if( ! response.data.isValid ){
-                setUserData(response.data.user);
+                await setUserData(response.data.user);
             }else{
-                storeUserAndSet();
+                await storeUserAndSet();
             }
             updateErrorMsg("");
             goToChat();

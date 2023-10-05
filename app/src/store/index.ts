@@ -16,7 +16,7 @@ const store = createStore({
             if( index === -1){
                 state.users.push({
                     uuid         : payload.uuid,
-                    prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+                    prependAvatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
                     title        : payload.username,
                     subtitle     : `<span class="text-${payload.online ? 'success':'info'}">
                       <strong>${payload.online?'On Line':'Offline'}</strong>

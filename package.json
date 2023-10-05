@@ -5,7 +5,10 @@
   "description": "This is a demo test",
   "main": "index.js",
   "scripts": {
-    "test": "vitest --run --reporter verbose"
+    "test": "vitest --run --reporter verbose",
+    "dev":"node ./server/server.js",
+    "install-server":"npm install",
+    "install-app":"cd app && npm install && cd .."
   },
   "author": "Fernando Odonez",
   "license": "ISC",

@@ -1,9 +1,7 @@
 <template>
   <v-container fluid>
     <v-app-bar color="primary">
-      <v-btn icon>
-            <v-icon>mdi-chevron-left</v-icon>
-          </v-btn>
+      
       <v-app-bar-title>{{userName}}</v-app-bar-title>
     </v-app-bar>
     <v-row>
@@ -161,7 +159,7 @@ const loadUsers = async () => {
     for(let user of response.data.users){
       container.push({
         uuid         : user.uuid,
-        prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        prependAvatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
         title        : user.name,
         subtitle     : `<span class="text-${user.online ? 'success':'info'}">
           <strong>${user.online?'On Line':'Offline'}</strong>

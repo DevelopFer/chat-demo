@@ -14,7 +14,7 @@ import { setUserOnline, setUserOffline } from "./user.js";
 
 const app = express();
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: process.env.APP_FRONT_END,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,  // Include cookies and credentials
   optionsSuccessStatus: 204, // No content response for preflight requests
@@ -33,18 +33,14 @@ import { router } from "./routes/index.js";
 
 const io = new Server(httpServer, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: process.env.APP_FRONT_END,
       methods: ["GET", "POST"],
-      allowedHeaders: ["my-custom-header"],
       credentials: true
     }
 });
   
 
 io.on("connection", (socket) => {
-  //console.log("connected", socket.id);
-  //addUser(socket);
-
 
   socket.on('login', async ({uuid}) => {
     try {

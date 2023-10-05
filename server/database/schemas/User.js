@@ -19,7 +19,6 @@ const UserSchema = new Schema({
     },
     socketId:{
         type:String,
-        unique:true,
     },
     conversations: [
         {
