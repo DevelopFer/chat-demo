@@ -14,7 +14,7 @@ cd chat-demo
 
 #### Install server dependencies
 ```bash
-npm install-server
+npm run install-server
 ```
 
 #### Install app dependencies
@@ -35,7 +35,22 @@ From the root folder run
 npm run dev
 ```
 
-Enter the app folder and run the front end app
+Opent another terminal, enter the app folder and run the front end app
 ```bash
 cd app && npm run dev
 ```
+
+
+### How to use the chat
+Access http://localhost:3000 and enter a name
+<img src="evidence/1.png" alt="Alt text" title="Optional title">
+
+You'll be redirected to the general chat view
+<img src="evidence/2.png" alt="Alt text" title="Optional title">
+
+Open another tab and enter a name. Once in the chat view a list of online users is shown. Click on the user element
+<img src="evidence/3.png" alt="Alt text" title="Optional title">
+
+Start chatting
+<img src="evidence/4.png" alt="Alt text" title="Optional title">
+<img src="evidence/5.png" alt="Alt text" title="Optional title">
